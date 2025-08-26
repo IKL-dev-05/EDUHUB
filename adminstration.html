@@ -10,250 +10,644 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            background-color: #f8fafc; /* Light gray background */
+            background-color: #f8fafc;
         }
     </style>
 </head>
 <body class="flex flex-col min-h-screen">
-    <!-- Main Container -->
     <div class="flex flex-1">
         <!-- Sidebar -->
         <aside class="w-64 bg-gradient-to-br from-indigo-700 to-purple-800 text-white p-6 shadow-lg hidden md:block">
             <div class="flex items-center mb-10">
-                <img src="FAVICON 1.jpeg" alt="Marish University Logo" class="rounded-full mr-3">
+                <img src="FAVICON 1.jpeg" alt="Marish University Logo" class="rounded-full mr-3 w-10 h-10">
                 <h1 class="text-2xl font-bold">Marish Admin</h1>
             </div>
             <nav>
                 <ul>
-                    <li class="mb-4">
-                        <a href="#" class="flex items-center p-3 rounded-lg hover:bg-indigo-600 transition-colors duration-200">
-                            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
-                            Dashboard
-                        </a>
-                    </li>
-                    <li class="mb-4">
-                        <a href="#" class="flex items-center p-3 rounded-lg bg-indigo-600 transition-colors duration-200">
-                            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.653-.182-1.263-.5-1.8m0 0A2.95 2.95 0 0115 12.5a2.95 2.95 0 01-.5-1.8m0 0H9m2.5 2.5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm0 0v-2a7.502 7.502 0 014.253-6.521M17 12.5a7.502 7.502 0 014.253-6.521m0 0A9.002 9.002 0 0012 3c-4.97 0-9 4.03-9 9s4.03 9 9 9"></path></svg>
-                            Student Management
-                        </a>
-                    </li>
-                    <li class="mb-4">
-                        <a href="#" class="flex items-center p-3 rounded-lg hover:bg-indigo-600 transition-colors duration-200">
-                            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.747 0-3.332-.477-4.5-1.253"></path></svg>
-                            Course Catalog
-                        </a>
-                    </li>
-                    <li class="mb-4">
-                        <a href="#" class="flex items-center p-3 rounded-lg hover:bg-indigo-600 transition-colors duration-200">
-                            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M12 20.354a4 4 0 110-5.292M12 14v6m0-10V4M5.354 12c-.792 0-1.556.148-2.268.41A4.004 4.004 0 003 16a4 4 0 002.354 3.59c.712.262 1.476.41 2.268.41C9.176 20 12 17.29 12 14.254V12m0 0c.792 0 1.556-.148 2.268-.41A4.004 4.004 0 0121 8a4.004 4.004 0 01-2.354-3.59C18.288 4.148 17.524 4 16.732 4 14.824 4 12 6.71 12 9.746V12"></path></svg>
-                            Faculty Directory
-                        </a>
-                    </li>
-                    <li class="mb-4">
-                        <a href="#" class="flex items-center p-3 rounded-lg hover:bg-indigo-600 transition-colors duration-200">
-                            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h.01M7 16h.01M17 16h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            Academic Calendar
-                        </a>
-                    </li>
-                    <li class="mb-4">
-                        <a href="#" class="flex items-center p-3 rounded-lg hover:bg-indigo-600 transition-colors duration-200">
-                            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                            Settings
-                        </a>
-                    </li>
-                    <li class="mb-4">
-                        <a href="#" class="flex items-center p-3 rounded-lg hover:bg-indigo-600 transition-colors duration-200">
-                            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
-                            Logout
-                        </a>
-                    </li>
+                    <li class="mb-4"><a href="#" class="flex items-center p-3 rounded-lg hover:bg-indigo-600">Dashboard</a></li>
+                    <li class="mb-4"><a href="#" class="flex items-center p-3 rounded-lg bg-indigo-600">Student Management</a></li>
+                    <li class="mb-4"><a href="#" class="flex items-center p-3 rounded-lg hover:bg-indigo-600">Course Catalog</a></li>
+                    <li class="mb-4"><a href="#" class="flex items-center p-3 rounded-lg hover:bg-indigo-600">Faculty Directory</a></li>
+                    <li class="mb-4"><a href="#" class="flex items-center p-3 rounded-lg hover:bg-indigo-600">Academic Calendar</a></li>
+                    <li class="mb-4"><a href="#" class="flex items-center p-3 rounded-lg hover:bg-indigo-600">Settings</a></li>
+                    <li class="mb-4"><a href="#" class="flex items-center p-3 rounded-lg hover:bg-indigo-600">Logout</a></li>
                 </ul>
             </nav>
         </aside>
 
-        <!-- Main Content Area -->
+        <!-- Main Content -->
         <main class="flex-1 p-6 lg:p-10">
-            <!-- Top Bar for Mobile Navigation -->
-            <div class="md:hidden flex justify-between items-center mb-6">
-                <h1 class="text-2xl font-bold text-gray-800">Marish Admin</h1>
-                <button id="mobile-menu-button" class="text-gray-600 hover:text-gray-800 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                </button>
-            </div>
-            <!-- Mobile Menu (Hidden by default, toggled by JS) -->
-            <nav id="mobile-menu" class="md:hidden bg-gradient-to-br from-indigo-700 to-purple-800 text-white p-6 rounded-lg shadow-lg mb-6 hidden">
-                <ul>
-                    <li class="mb-4"><a href="#" class="flex items-center p-3 rounded-lg hover:bg-indigo-600 transition-colors duration-200"><svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>Dashboard</a></li>
-                    <li class="mb-4"><a href="#" class="flex items-center p-3 rounded-lg bg-indigo-600 transition-colors duration-200"><svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.653-.182-1.263-.5-1.8m0 0A2.95 2.95 0 0115 12.5a2.95 2.95 0 01-.5-1.8m0 0H9m2.5 2.5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm0 0v-2a7.502 7.502 0 014.253-6.521M17 12.5a7.502 7.502 0 014.253-6.521m0 0A9.002 9.002 0 0012 3c-4.97 0-9 4.03-9 9s4.03 9 9 9"></path></svg>Student Management</a></li>
-                    <li class="mb-4"><a href="#" class="flex items-center p-3 rounded-lg hover:bg-indigo-600 transition-colors duration-200"><svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.747 0-3.332-.477-4.5-1.253"></path></svg>Course Catalog</a></li>
-                    <li class="mb-4"><a href="#" class="flex items-center p-3 rounded-lg hover:bg-indigo-600 transition-colors duration-200"><svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M12 20.354a4 4 0 110-5.292M12 14v6m0-10V4M5.354 12c-.792 0-1.556.148-2.268.41A4.004 4.004 0 003 16a4 4 0 002.354 3.59c.712.262 1.476.41 2.268.41C9.176 20 12 17.29 12 14.254V12m0 0c.792 0 1.556-.148 2.268-.41A4.004 4.004 0 0121 8a4.004 4.004 0 01-2.354-3.59C18.288 4.148 17.524 4 16.732 4 14.824 4 12 6.71 12 9.746V12"></path></svg>Faculty Directory</a></li>
-                    <li class="mb-4"><a href="#" class="flex items-center p-3 rounded-lg hover:bg-indigo-600 transition-colors duration-200"><svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h.01M7 16h.01M17 16h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>Academic Calendar</a></li>
-                    <li class="mb-4"><a href="#" class="flex items-center p-3 rounded-lg hover:bg-indigo-600 transition-colors duration-200"><svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>Settings</a></li>
-                    <li class="mb-4"><a href="#" class="flex items-center p-3 rounded-lg hover:bg-indigo-600 transition-colors duration-200"><svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>Logout</a></li>
-                </ul>
-            </nav>
-
             <h2 class="text-3xl font-semibold text-gray-800 mb-8">Student Management</h2>
 
-            <!-- Search and Filter Section -->
+            <!-- Search + Filter -->
             <div class="bg-white p-6 rounded-xl shadow-md mb-8">
                 <div class="flex flex-col md:flex-row items-center justify-between mb-4">
                     <div class="relative flex-grow w-full md:w-auto mb-4 md:mb-0 md:mr-4">
-                        <input type="text" placeholder="Search students by name, ID, or email..." class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
-                        <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        <input id="searchInput" type="text" placeholder="Search students..." class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg">
+                        <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
                     </div>
-                    <select class="w-full md:w-auto px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 mr-0 md:mr-4 mb-4 md:mb-0">
-                        <option value="">Filter by Department</option>
-                        <option value="cs">Computer Science</option>
-                        <option value="eng">Engineering</option>
-                        <option value="art">Arts & Humanities</option>
-                        <option value="med">Medicine</option>
+                    <select id="departmentFilter" class="w-full md:w-auto px-4 py-2 border border-gray-300 rounded-lg mr-0 md:mr-4">
+                        <option value="">All Departments</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Engineering">Engineering</option>
+                        <option value="Arts & Humanities">Arts & Humanities</option>
+                        <option value="Medicine">Medicine</option>
                     </select>
-                    <button class="w-full md:w-auto px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors duration-200 shadow-md">
-                        Add New Student
-                    </button>
+                    <button id="addStudentBtn" class="w-full md:w-auto px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">Add New Student</button>
                 </div>
             </div>
 
-            <!-- Student List Table -->
+            <!-- Student Table -->
             <div class="bg-white p-6 rounded-xl shadow-md overflow-x-auto">
-                <table class="min-w-full divide-y divide-gray-200">
+                <table id="studentTable" class="min-w-full divide-y divide-gray-200">
                     <thead class="bg-gray-50">
                         <tr>
-                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider rounded-tl-lg">
-                                Student ID
-                            </th>
-                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Name
-                            </th>
-                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Email
-                            </th>
-                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Department
-                            </th>
-                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider rounded-tr-lg">
-                                Actions
-                            </th>
+                            <th class="px-6 py-3 text-left">Student ID</th>
+                            <th class="px-6 py-3 text-left">Name</th>
+                            <th class="px-6 py-3 text-left">Email</th>
+                            <th class="px-6 py-3 text-left">Department</th>
+                            <th class="px-6 py-3 text-left">Actions</th>
                         </tr>
                     </thead>
-                    <tbody class="bg-white divide-y divide-gray-200">
-                        <!-- Sample Student Row 1 -->
-                        <tr>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                                MU1001
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                Alice Johnson
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                alice.j@marishuni.edu
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                Computer Science
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                <a href="#" class="text-indigo-600 hover:text-indigo-900 mr-4">Edit</a>
-                                <a href="#" class="text-red-600 hover:text-red-900">Delete</a>
-                            </td>
-                        </tr>
-                        <!-- Sample Student Row 2 -->
-                        <tr>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                                MU1002
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                Bob Williams
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                bob.w@marishuni.edu
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                Engineering
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                <a href="#" class="text-indigo-600 hover:text-indigo-900 mr-4">Edit</a>
-                                <a href="#" class="text-red-600 hover:text-red-900">Delete</a>
-                            </td>
-                        </tr>
-                        <!-- Sample Student Row 3 -->
-                        <tr>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                                MU1003
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                Carol White
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                carol.w@marishuni.edu
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                Arts & Humanities
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                <a href="#" class="text-indigo-600 hover:text-indigo-900 mr-4">Edit</a>
-                                <a href="#" class="text-red-600 hover:text-red-900">Delete</a>
-                            </td>
-                        </tr>
-                        <!-- Sample Student Row 4 -->
-                        <tr>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                                MU1004
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                David Green
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                david.g@marishuni.edu
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                Medicine
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                <a href="#" class="text-indigo-600 hover:text-indigo-900 mr-4">Edit</a>
-                                <a href="#" class="text-red-600 hover:text-red-900">Delete</a>
-                            </td>
-                        </tr>
+                    <tbody id="studentTableBody" class="divide-y divide-gray-200">
+                        <!-- Filled by JavaScript -->
                     </tbody>
                 </table>
-            </div>
-
-            <!-- Pagination (Placeholder) -->
-            <div class="flex justify-center mt-8">
-                <nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
-                    <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
-                        <span class="sr-only">Previous</span>
-                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                            <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
-                        </svg>
-                    </a>
-                    <a href="#" aria-current="page" class="z-10 bg-indigo-50 border-indigo-500 text-indigo-600 relative inline-flex items-center px-4 py-2 border text-sm font-medium">
-                        1
-                    </a>
-                    <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
-                        2
-                    </a>
-                    <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
-                        3
-                    </a>
-                    <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
-                        <span class="sr-only">Next</span>
-                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10l-3.293-3.293a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-                        </svg>
-                    </a>
-                </nav>
             </div>
         </main>
     </div>
 
     <script>
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenu.classList.toggle('hidden');
+        // Sample Student Data
+        let students = [
+            { id: "MU1001", name: "Alice Johnson", email: "alice.j@marishuni.edu", dept: "Computer Science" },
+            { id: "MU1002", name: "Bob Williams", email: "bob.w@marishuni.edu", dept: "Engineering" },
+            { id: "MU1003", name: "Carol White", email: "carol.w@marishuni.edu", dept: "Arts & Humanities" },
+            { id: "MU1004", name: "David Green", email: "david.g@marishuni.edu", dept: "Medicine" }
+        ];
+
+        const studentTableBody = document.getElementById("studentTableBody");
+        const searchInput = document.getElementById("searchInput");
+        const departmentFilter = document.getElementById("departmentFilter");
+
+        // Render Table
+        function renderStudents() {
+            const searchText = searchInput.value.toLowerCase();
+            const filterDept = departmentFilter.value;
+
+            studentTableBody.innerHTML = "";
+
+            students
+                .filter(s =>
+                    (s.name.toLowerCase().includes(searchText) ||
+                    s.id.toLowerCase().includes(searchText) ||
+                    s.email.toLowerCase().includes(searchText)) &&
+                    (filterDept === "" || s.dept === filterDept)
+                )
+                .forEach((s, index) => {
+                    const row = document.createElement("tr");
+                    row.innerHTML = `
+                        <td class="px-6 py-4">${s.id}</td>
+                        <td class="px-6 py-4">${s.name}</td>
+                        <td class="px-6 py-4">${s.email}</td>
+                        <td class="px-6 py-4">${s.dept}</td>
+                        <td class="px-6 py-4 text-sm">
+                            <button onclick="editStudent(${index})" class="text-indigo-600 mr-4">Edit</button>
+                            <button onclick="deleteStudent(${index})" class="text-red-600">Delete</button>
+                        </td>
+                    `;
+                    studentTableBody.appendChild(row);
+                });
+        }
+
+        // Add Student
+        document.getElementById("addStudentBtn").addEventListener("click", () => {
+            const id = prompt("Enter Student ID:");
+            const name = prompt("Enter Name:");
+            const email = prompt("Enter Email:");
+            const dept = prompt("Enter Department:");
+            if (id && name && email && dept) {
+                students.push({ id, name, email, dept });
+                renderStudents();
+            }
         });
+
+        // Edit Student
+        function editStudent(index) {
+            const s = students[index];
+            const name = prompt("Edit Name:", s.name);
+            const email = prompt("Edit Email:", s.email);
+            const dept = prompt("Edit Department:", s.dept);
+            if (name && email && dept) {
+                students[index] = { ...s, name, email, dept };
+                renderStudents();
+            }
+        }
+
+        // Delete Student
+        function deleteStudent(index) {
+            if (confirm("Are you sure you want to delete this student?")) {
+                students.splice(index, 1);
+                renderStudents();
+            }
+        }
+
+        // Search & Filter Events
+        searchInput.addEventListener("input", renderStudents);
+        departmentFilter.addEventListener("change", renderStudents);
+
+        // Initial Render
+        renderStudents();
     </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marish University Admin Dashboard</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+    <div class="flex flex-1">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-gradient-to-br from-indigo-700 to-purple-800 text-white p-6 shadow-lg hidden md:block">
+            <div class="flex items-center mb-10">
+                <img src="FAVICON 1.jpeg" alt="Marish University Logo" class="rounded-full mr-3 w-10 h-10">
+                <h1 class="text-2xl font-bold">Marish Admin</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="mb-4"><a href="#" class="flex items-center p-3 rounded-lg hover:bg-indigo-600">Dashboard</a></li>
+                    <li class="mb-4"><a href="#" class="flex items-center p-3 rounded-lg bg-indigo-600">Student Management</a></li>
+                    <li class="mb-4"><a href="#" class="flex items-center p-3 rounded-lg hover:bg-indigo-600">Course Catalog</a></li>
+                    <li class="mb-4"><a href="#" class="flex items-center p-3 rounded-lg hover:bg-indigo-600">Faculty Directory</a></li>
+                    <li class="mb-4"><a href="#" class="flex items-center p-3 rounded-lg hover:bg-indigo-600">Academic Calendar</a></li>
+                    <li class="mb-4"><a href="#" class="flex items-center p-3 rounded-lg hover:bg-indigo-600">Settings</a></li>
+                    <li class="mb-4"><a href="#" class="flex items-center p-3 rounded-lg hover:bg-indigo-600">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-6 lg:p-10">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-8">Student Management</h2>
+
+            <!-- Search + Filter -->
+            <div class="bg-white p-6 rounded-xl shadow-md mb-8">
+                <div class="flex flex-col md:flex-row items-center justify-between mb-4">
+                    <div class="relative flex-grow w-full md:w-auto mb-4 md:mb-0 md:mr-4">
+                        <input id="searchInput" type="text" placeholder="Search students..." class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg">
+                        <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                    </div>
+                    <select id="departmentFilter" class="w-full md:w-auto px-4 py-2 border border-gray-300 rounded-lg mr-0 md:mr-4">
+                        <option value="">All Departments</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Engineering">Engineering</option>
+                        <option value="Arts & Humanities">Arts & Humanities</option>
+                        <option value="Medicine">Medicine</option>
+                    </select>
+                    <button id="addStudentBtn" class="w-full md:w-auto px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">Add New Student</button>
+                </div>
+            </div>
+
+            <!-- Student Table -->
+            <div class="bg-white p-6 rounded-xl shadow-md overflow-x-auto">
+                <table id="studentTable" class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left">Student ID</th>
+                            <th class="px-6 py-3 text-left">Name</th>
+                            <th class="px-6 py-3 text-left">Email</th>
+                            <th class="px-6 py-3 text-left">Department</th>
+                            <th class="px-6 py-3 text-left">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentTableBody" class="divide-y divide-gray-200">
+                        <!-- Filled by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Sample Student Data
+        let students = [
+            { id: "MU1001", name: "Alice Johnson", email: "alice.j@marishuni.edu", dept: "Computer Science" },
+            { id: "MU1002", name: "Bob Williams", email: "bob.w@marishuni.edu", dept: "Engineering" },
+            { id: "MU1003", name: "Carol White", email: "carol.w@marishuni.edu", dept: "Arts & Humanities" },
+            { id: "MU1004", name: "David Green", email: "david.g@marishuni.edu", dept: "Medicine" }
+        ];
+
+        const studentTableBody = document.getElementById("studentTableBody");
+        const searchInput = document.getElementById("searchInput");
+        const departmentFilter = document.getElementById("departmentFilter");
+
+        // Render Table
+        function renderStudents() {
+            const searchText = searchInput.value.toLowerCase();
+            const filterDept = departmentFilter.value;
+
+            studentTableBody.innerHTML = "";
+
+            students
+                .filter(s =>
+                    (s.name.toLowerCase().includes(searchText) ||
+                    s.id.toLowerCase().includes(searchText) ||
+                    s.email.toLowerCase().includes(searchText)) &&
+                    (filterDept === "" || s.dept === filterDept)
+                )
+                .forEach((s, index) => {
+                    const row = document.createElement("tr");
+                    row.innerHTML = `
+                        <td class="px-6 py-4">${s.id}</td>
+                        <td class="px-6 py-4">${s.name}</td>
+                        <td class="px-6 py-4">${s.email}</td>
+                        <td class="px-6 py-4">${s.dept}</td>
+                        <td class="px-6 py-4 text-sm">
+                            <button onclick="editStudent(${index})" class="text-indigo-600 mr-4">Edit</button>
+                            <button onclick="deleteStudent(${index})" class="text-red-600">Delete</button>
+                        </td>
+                    `;
+                    studentTableBody.appendChild(row);
+                });
+        }
+
+        // Add Student
+        document.getElementById("addStudentBtn").addEventListener("click", () => {
+            const id = prompt("Enter Student ID:");
+            const name = prompt("Enter Name:");
+            const email = prompt("Enter Email:");
+            const dept = prompt("Enter Department:");
+            if (id && name && email && dept) {
+                students.push({ id, name, email, dept });
+                renderStudents();
+            }
+        });
+
+        // Edit Student
+        function editStudent(index) {
+            const s = students[index];
+            const name = prompt("Edit Name:", s.name);
+            const email = prompt("Edit Email:", s.email);
+            const dept = prompt("Edit Department:", s.dept);
+            if (name && email && dept) {
+                students[index] = { ...s, name, email, dept };
+                renderStudents();
+            }
+        }
+
+        // Delete Student
+        function deleteStudent(index) {
+            if (confirm("Are you sure you want to delete this student?")) {
+                students.splice(index, 1);
+                renderStudents();
+            }
+        }
+
+        // Search & Filter Events
+        searchInput.addEventListener("input", renderStudents);
+        departmentFilter.addEventListener("change", renderStudents);
+
+        // Initial Render
+        renderStudents();
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marish University Admin Dashboard</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+    <div class="flex flex-1">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-gradient-to-br from-indigo-700 to-purple-800 text-white p-6 shadow-lg hidden md:block">
+            <div class="flex items-center mb-10">
+                <img src="FAVICON 1.jpeg" alt="Marish University Logo" class="rounded-full mr-3 w-10 h-10">
+                <h1 class="text-2xl font-bold">Marish Admin</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="mb-4"><a href="#" class="flex items-center p-3 rounded-lg hover:bg-indigo-600">Dashboard</a></li>
+                    <li class="mb-4"><a href="#" class="flex items-center p-3 rounded-lg bg-indigo-600">Student Management</a></li>
+                    <li class="mb-4"><a href="#" class="flex items-center p-3 rounded-lg hover:bg-indigo-600">Course Catalog</a></li>
+                    <li class="mb-4"><a href="#" class="flex items-center p-3 rounded-lg hover:bg-indigo-600">Faculty Directory</a></li>
+                    <li class="mb-4"><a href="#" class="flex items-center p-3 rounded-lg hover:bg-indigo-600">Academic Calendar</a></li>
+                    <li class="mb-4"><a href="#" class="flex items-center p-3 rounded-lg hover:bg-indigo-600">Settings</a></li>
+                    <li class="mb-4"><a href="#" class="flex items-center p-3 rounded-lg hover:bg-indigo-600">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-6 lg:p-10">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-8">Student Management</h2>
+
+            <!-- Search + Filter -->
+            <div class="bg-white p-6 rounded-xl shadow-md mb-8">
+                <div class="flex flex-col md:flex-row items-center justify-between mb-4">
+                    <div class="relative flex-grow w-full md:w-auto mb-4 md:mb-0 md:mr-4">
+                        <input id="searchInput" type="text" placeholder="Search students..." class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg">
+                        <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                    </div>
+                    <select id="departmentFilter" class="w-full md:w-auto px-4 py-2 border border-gray-300 rounded-lg mr-0 md:mr-4">
+                        <option value="">All Departments</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Engineering">Engineering</option>
+                        <option value="Arts & Humanities">Arts & Humanities</option>
+                        <option value="Medicine">Medicine</option>
+                    </select>
+                    <button id="addStudentBtn" class="w-full md:w-auto px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">Add New Student</button>
+                </div>
+            </div>
+
+            <!-- Student Table -->
+            <div class="bg-white p-6 rounded-xl shadow-md overflow-x-auto">
+                <table id="studentTable" class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left">Student ID</th>
+                            <th class="px-6 py-3 text-left">Name</th>
+                            <th class="px-6 py-3 text-left">Email</th>
+                            <th class="px-6 py-3 text-left">Department</th>
+                            <th class="px-6 py-3 text-left">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentTableBody" class="divide-y divide-gray-200">
+                        <!-- Filled by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Sample Student Data
+        let students = [
+            { id: "MU1001", name: "Alice Johnson", email: "alice.j@marishuni.edu", dept: "Computer Science" },
+            { id: "MU1002", name: "Bob Williams", email: "bob.w@marishuni.edu", dept: "Engineering" },
+            { id: "MU1003", name: "Carol White", email: "carol.w@marishuni.edu", dept: "Arts & Humanities" },
+            { id: "MU1004", name: "David Green", email: "david.g@marishuni.edu", dept: "Medicine" }
+        ];
+
+        const studentTableBody = document.getElementById("studentTableBody");
+        const searchInput = document.getElementById("searchInput");
+        const departmentFilter = document.getElementById("departmentFilter");
+
+        // Render Table
+        function renderStudents() {
+            const searchText = searchInput.value.toLowerCase();
+            const filterDept = departmentFilter.value;
+
+            studentTableBody.innerHTML = "";
+
+            students
+                .filter(s =>
+                    (s.name.toLowerCase().includes(searchText) ||
+                    s.id.toLowerCase().includes(searchText) ||
+                    s.email.toLowerCase().includes(searchText)) &&
+                    (filterDept === "" || s.dept === filterDept)
+                )
+                .forEach((s, index) => {
+                    const row = document.createElement("tr");
+                    row.innerHTML = `
+                        <td class="px-6 py-4">${s.id}</td>
+                        <td class="px-6 py-4">${s.name}</td>
+                        <td class="px-6 py-4">${s.email}</td>
+                        <td class="px-6 py-4">${s.dept}</td>
+                        <td class="px-6 py-4 text-sm">
+                            <button onclick="editStudent(${index})" class="text-indigo-600 mr-4">Edit</button>
+                            <button onclick="deleteStudent(${index})" class="text-red-600">Delete</button>
+                        </td>
+                    `;
+                    studentTableBody.appendChild(row);
+                });
+        }
+
+        // Add Student
+        document.getElementById("addStudentBtn").addEventListener("click", () => {
+            const id = prompt("Enter Student ID:");
+            const name = prompt("Enter Name:");
+            const email = prompt("Enter Email:");
+            const dept = prompt("Enter Department:");
+            if (id && name && email && dept) {
+                students.push({ id, name, email, dept });
+                renderStudents();
+            }
+        });
+
+        // Edit Student
+        function editStudent(index) {
+            const s = students[index];
+            const name = prompt("Edit Name:", s.name);
+            const email = prompt("Edit Email:", s.email);
+            const dept = prompt("Edit Department:", s.dept);
+            if (name && email && dept) {
+                students[index] = { ...s, name, email, dept };
+                renderStudents();
+            }
+        }
+
+        // Delete Student
+        function deleteStudent(index) {
+            if (confirm("Are you sure you want to delete this student?")) {
+                students.splice(index, 1);
+                renderStudents();
+            }
+        }
+
+        // Search & Filter Events
+        searchInput.addEventListener("input", renderStudents);
+        departmentFilter.addEventListener("change", renderStudents);
+
+        // Initial Render
+        renderStudents();
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marish University Admin Dashboard</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+    <div class="flex flex-1">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-gradient-to-br from-indigo-700 to-purple-800 text-white p-6 shadow-lg hidden md:block">
+            <div class="flex items-center mb-10">
+                <img src="FAVICON 1.jpeg" alt="Marish University Logo" class="rounded-full mr-3 w-10 h-10">
+                <h1 class="text-2xl font-bold">Marish Admin</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="mb-4"><a href="#" class="flex items-center p-3 rounded-lg hover:bg-indigo-600">Dashboard</a></li>
+                    <li class="mb-4"><a href="#" class="flex items-center p-3 rounded-lg bg-indigo-600">Student Management</a></li>
+                    <li class="mb-4"><a href="#" class="flex items-center p-3 rounded-lg hover:bg-indigo-600">Course Catalog</a></li>
+                    <li class="mb-4"><a href="#" class="flex items-center p-3 rounded-lg hover:bg-indigo-600">Faculty Directory</a></li>
+                    <li class="mb-4"><a href="#" class="flex items-center p-3 rounded-lg hover:bg-indigo-600">Academic Calendar</a></li>
+                    <li class="mb-4"><a href="#" class="flex items-center p-3 rounded-lg hover:bg-indigo-600">Settings</a></li>
+                    <li class="mb-4"><a href="#" class="flex items-center p-3 rounded-lg hover:bg-indigo-600">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-6 lg:p-10">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-8">Student Management</h2>
+
+            <!-- Search + Filter -->
+            <div class="bg-white p-6 rounded-xl shadow-md mb-8">
+                <div class="flex flex-col md:flex-row items-center justify-between mb-4">
+                    <div class="relative flex-grow w-full md:w-auto mb-4 md:mb-0 md:mr-4">
+                        <input id="searchInput" type="text" placeholder="Search students..." class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg">
+                        <svg class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                    </div>
+                    <select id="departmentFilter" class="w-full md:w-auto px-4 py-2 border border-gray-300 rounded-lg mr-0 md:mr-4">
+                        <option value="">All Departments</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Engineering">Engineering</option>
+                        <option value="Arts & Humanities">Arts & Humanities</option>
+                        <option value="Medicine">Medicine</option>
+                    </select>
+                    <button id="addStudentBtn" class="w-full md:w-auto px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">Add New Student</button>
+                </div>
+            </div>
+
+            <!-- Student Table -->
+            <div class="bg-white p-6 rounded-xl shadow-md overflow-x-auto">
+                <table id="studentTable" class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left">Student ID</th>
+                            <th class="px-6 py-3 text-left">Name</th>
+                            <th class="px-6 py-3 text-left">Email</th>
+                            <th class="px-6 py-3 text-left">Department</th>
+                            <th class="px-6 py-3 text-left">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentTableBody" class="divide-y divide-gray-200">
+                        <!-- Filled by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Sample Student Data
+        let students = [
+            { id: "MU1001", name: "Alice Johnson", email: "alice.j@marishuni.edu", dept: "Computer Science" },
+            { id: "MU1002", name: "Bob Williams", email: "bob.w@marishuni.edu", dept: "Engineering" },
+            { id: "MU1003", name: "Carol White", email: "carol.w@marishuni.edu", dept: "Arts & Humanities" },
+            { id: "MU1004", name: "David Green", email: "david.g@marishuni.edu", dept: "Medicine" }
+        ];
+
+        const studentTableBody = document.getElementById("studentTableBody");
+        const searchInput = document.getElementById("searchInput");
+        const departmentFilter = document.getElementById("departmentFilter");
+
+        // Render Table
+        function renderStudents() {
+            const searchText = searchInput.value.toLowerCase();
+            const filterDept = departmentFilter.value;
+
+            studentTableBody.innerHTML = "";
+
+            students
+                .filter(s =>
+                    (s.name.toLowerCase().includes(searchText) ||
+                    s.id.toLowerCase().includes(searchText) ||
+                    s.email.toLowerCase().includes(searchText)) &&
+                    (filterDept === "" || s.dept === filterDept)
+                )
+                .forEach((s, index) => {
+                    const row = document.createElement("tr");
+                    row.innerHTML = `
+                        <td class="px-6 py-4">${s.id}</td>
+                        <td class="px-6 py-4">${s.name}</td>
+                        <td class="px-6 py-4">${s.email}</td>
+                        <td class="px-6 py-4">${s.dept}</td>
+                        <td class="px-6 py-4 text-sm">
+                            <button onclick="editStudent(${index})" class="text-indigo-600 mr-4">Edit</button>
+                            <button onclick="deleteStudent(${index})" class="text-red-600">Delete</button>
+                        </td>
+                    `;
+                    studentTableBody.appendChild(row);
+                });
+        }
+
+        // Add Student
+        document.getElementById("addStudentBtn").addEventListener("click", () => {
+            const id = prompt("Enter Student ID:");
+            const name = prompt("Enter Name:");
+            const email = prompt("Enter Email:");
+            const dept = prompt("Enter Department:");
+            if (id && name && email && dept) {
+                students.push({ id, name, email, dept });
+                renderStudents();
+            }
+        });
+
+        // Edit Student
+        function editStudent(index) {
+            const s = students[index];
+            const name = prompt("Edit Name:", s.name);
+            const email = prompt("Edit Email:", s.email);
+            const dept = prompt("Edit Department:", s.dept);
+            if (name && email && dept) {
+                students[index] = { ...s, name, email, dept };
+                renderStudents();
+            }
+        }
+
+        // Delete Student
+        function deleteStudent(index) {
+            if (confirm("Are you sure you want to delete this student?")) {
+                students.splice(index, 1);
+                renderStudents();
+            }
+        }
+
+        // Search & Filter Events
+        searchInput.addEventListener("input", renderStudents);
+        departmentFilter.addEventListener("change", renderStudents);
+
+        // Initial Render
+        renderStudents();
+    </script>
+</body>
+</html>
+
