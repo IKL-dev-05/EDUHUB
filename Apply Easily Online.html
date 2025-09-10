@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Online Application</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e40af',
+                        secondary: '#64748b',
+                        accent: '#f59e0b',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen font-sans">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <!-- Header Section -->
+        <header class="text-center mb-8">
+            <div class="mb-4">
+                <img src="FAVICON 1.jpeg" alt="Professional application platform logo featuring a stylized globe with arrows indicating global connectivity, in shades of blue and white, symbolizing accessible online services from anywhere." class="mx-auto" />
+            </div>
+            <h1 class="text-4xl font-bold text-gray-800 mb-2">Complete Your Quick Online Application</h1>
+            <p class="text-lg text-gray-600">Apply from anywhere around the world, submit your required documents, and track your progress in real-time.</p>
+        </header>
+
+        <!-- Progress Tracker -->
+        <div id="progress-container" class="mb-6">
+            <div class="flex items-center justify-between mb-2">
+                <div id="step1" class="step flex-1 text-center relative">
+                    <div class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-1 font-bold">1</div>
+                    <p class="text-sm font-medium">Personal Info</p>
+                </div>
+                <div class="flex-1 flex justify-center">
+                    <div class="w-px h-8 bg-gray-300"></div>
+                </div>
+                <div id="step2" class="step flex-1 text-center relative">
+                    <div class="w-10 h-10 bg-gray-300 text-gray-600 rounded-full flex items-center justify-center mx-auto mb-1 font-bold">2</div>
+                    <p class="text-sm font-medium">Application Details</p>
+                </div>
+                <div class="flex-1 flex justify-center">
+                    <div class="w-px h-8 bg-gray-300"></div>
+                </div>
+                <div id="step3" class="step flex-1 text-center relative">
+                    <div class="w-10 h-10 bg-gray-300 text-gray-600 rounded-full flex items-center justify-center mx-auto mb-1 font-bold">3</div>
+                    <p class="text-sm font-medium">Document Upload</p>
+                </div>
+                <div class="flex-1 flex justify-center">
+                    <div class="w-px h-8 bg-gray-300"></div>
+                </div>
+                <div id="step4" class="step flex-1 text-center relative">
+                    <div class="w-10 h-10 bg-gray-300 text-gray-600 rounded-full flex items-center justify-center mx-auto mb-1 font-bold">4</div>
+                    <p class="text-sm font-medium">Review & Submit</p>
+                </div>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2">
+                <div id="progress-bar" class="bg-primary h-2 rounded-full" style="width: 0%;"></div>
+            </div>
+            <p class="text-center text-sm text-gray-500 mt-2" id="progress-text">Progress: 0%</p>
+        </div>
+
+        <!-- Form Container -->
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <!-- Step 1: Personal Information -->
+            <form id="application-form" class="space-y-6">
+                <div id="step1-content" class="step-content">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Step 1: Personal Information</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label for="full-name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                            <input type="text" id="full-name" name="full-name" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                            <input type="email" id="email" name="email" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary">
+                        </div>
+                        <div>
+                            <label for="dob" class="block text-sm font-medium text-gray-700">Date of Birth</label>
+                            <input type="date" id="dob" name="dob" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary">
+                        </div>
+                    </div>
+                    <button type="button" id="next1" class="mt-6 bg-primary text-white px-6 py-2 rounded-md hover:bg-blue-700 transition duration-200">Next</button>
+                </div>
+
+                <!-- Step 2: Application Details -->
+                <div id="step2-content" class="step-content hidden">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Step 2: Application Details</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label for="application-type" class="block text-sm font-medium text-gray-700">Application Type</label>
+                            <select id="application-type" name="application-type" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary">
+                                <option value="">Select Type</option>
+                                <option value="scholarship">Scholarship</option>
+                               <option value="course">Course Enrollment</option>
+
+                            </select>
+                        </div>
+                        <div>
+                            <label for="location" class="block text-sm font-medium text-gray-700">Preferred Location</label>
+                            <input type="text" id="location" name="location" placeholder="City, Country" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary">
+                        </div>
+                        <div class="md:col-span-2">
+                            <label for="motivation" class="block text-sm font-medium text-gray-700">Motivation Statement</label>
+                            <textarea id="motivation" name="motivation" rows="4" placeholder="Tell us why you're applying..." class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary"></textarea>
+                        </div>
+                    </div>
+                    <div class="flex justify-between mt-6">
+                        <button type="button" id="prev2" class="bg-secondary text-white px-6 py-2 rounded-md hover:bg-gray-500 transition duration-200">Previous</button>
+                        <button type="button" id="next2" class="bg-primary text-white px-6 py-2 rounded-md hover:bg-blue-700 transition duration-200">Next</button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Document Upload -->
+                <div id="step3-content" class="step-content hidden">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Step 3: Document Submission</h2>
+                    <p class="text-sm text-gray-600 mb-4">Please upload the required documents. Supported formats: PDF, DOC, DOCX, JPG, PNG. Maximum file size: 5MB each.</p>
+                    <div class="space-y-4">
+                        <div>
+                            <label for="resume" class="block text-sm font-medium text-gray-700">Resume/CV</label>
+                            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm">
+                        </div>
+                        <div>
+                            <label for="id-proof" class="block text-sm font-medium text-gray-700">ID Proof</label>
+                            <input type="file" id="id-proof" name="id-proof" accept=".jpg,.png,.pdf" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm">
+                        </div>
+                        <div>
+                            <label for="transcript" class="block text-sm font-medium text-gray-700">Academic Transcript (if applicable)</label>
+                            <input type="file" id="transcript" name="transcript" accept=".pdf,.jpg,.png" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm">
+                        </div>
+                        <div>
+                            <label for="reference-letter" class="block text-sm font-medium text-gray-700">Reference Letter (optional)</label>
+                            <input type="file" id="reference-letter" name="reference-letter" accept=".pdf,.doc,.docx" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm">
+                        </div>
+                    </div>
+                    <div class="flex justify-between mt-6">
+                        <button type="button" id="prev3" class="bg-secondary text-white px-6 py-2 rounded-md hover:bg-gray-500 transition duration-200">Previous</button>
+                        <button type="button" id="next3" class="bg-primary text-white px-6 py-2 rounded-md hover:bg-blue-700 transition duration-200">Next</button>
+                    </div>
+                </div>
+
+                <!-- Step 4: Review & Submit -->
+                <div id="step4-content" class="step-content hidden">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Step 4: Review & Submit</h2>
+                    <div class="bg-gray-50 p-4 rounded-md mb-4">
+                        <h3 class="font-medium text-gray-800 mb-2">Review Your Information:</h3>
+                        <div id="review-personal" class="mb-4">
+                            <h4 class="font-medium">Personal Info:</h4>
+                            <p id="review-name" class="text-sm text-gray-600"></p>
+                            <p id="review-email" class="text-sm text-gray-600"></p>
+                            <p id="review-phone" class="text-sm text-gray-600"></p>
+                            <p id="review-dob" class="text-sm text-gray-600"></p>
+                        </div>
+                        <div id="review-details" class="mb-4">
+                            <h4 class="font-medium">Application Details:</h4>
+                            <p id="review-type" class="text-sm text-gray-600"></p>
+                            <p id="review-location" class="text-sm text-gray-600"></p>
+                            <p id="review-motivation" class="text-sm text-gray-600"></p>
+                        </div>
+                        <div id="review-documents">
+                            <h4 class="font-medium">Uploaded Documents:</h4>
+                            <p id="review-resume" class="text-sm text-gray-600"></p>
+                            <p id="review-id-proof" class="text-sm text-gray-600"></p>
+                            <p id="review-transcript" class="text-sm text-gray-600"></p>
+                            <p id="review-reference" class="text-sm text-gray-600"></p>
+                        </div>
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <input type="checkbox" id="agree" name="agree" required class="mr-2">
+                        <label for="agree" class="text-sm text-gray-700">I agree to the terms and conditions and confirm that all information provided is accurate.</label>
+                    </div>
+                    <div class="flex justify-between mt-6">
+                        <button type="button" id="prev4" class="bg-secondary text-white px-6 py-2 rounded-md hover:bg-gray-500 transition duration-200">Previous</button>
+                        <button type="submit" id="submit-btn" class="bg-accent text-white px-6 py-2 rounded-md hover:bg-orange-500 transition duration-200">Submit Application</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Submission Confirmation -->
+        <div id="confirmation" class="bg-white rounded-lg shadow-lg p-6 mt-6 hidden">
+            <div class="text-center">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3bce6c3c-d62e-4620-af2e-b056fb516449.png" alt="Celebratory checkmark icon with confetti, in green and gold colors, representing successful submission and approval." class="mx-auto mb-4" />
+                <h2 class="text-2xl font-semibold text-green-600 mb-2">Application Submitted Successfully!</h2>
+                <p class="text-gray-600 mb-4">Your application has been received. You can track your progress using the application ID below:</p>
+                <p class="font-mono font-bold text-lg text-blue-600 mb-4" id="application-id">APP-123456-789</p>
+                <button type="button" id="track-btn" class="bg-primary text-white px-6 py-2 rounded-md hover:bg-blue-700 transition duration-200">Track Your Progress</button>
+            </div>
+        </div>
+
+        <!-- Progress Tracking Section (Initially Hidden) -->
+        <div id="tracking-section" class="bg-white rounded-lg shadow-lg p-6 mt-6 hidden">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Application Status</h2>
+            <div class="space-y-4">
+                <div class="flex items-center">
+                    <div class="w-4 h-4 bg-green-500 rounded-full mr-3"></div>
+                    <span>Submitted - Received</span>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-4 h-4 bg-yellow-500 rounded-full mr-3"></div>
+                    <span>Under Review - In Process</span>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-4 h-4 bg-gray-300 rounded-full mr-3"></div>
+                    <span>Decision Pending</span>
+                </div>
+            </div>
+            <p class="text-sm text-gray-500 mt-4">You will receive an email update when your status changes.</p>
+        </div>
+    </div>
+
+    <script>
+        // Variables
+        let currentStep = 1;
+        const totalSteps = 4;
+        const stepContents = document.querySelectorAll('.step-content');
+        const stepIndicators = document.querySelectorAll('.step');
+        const progressBar = document.getElementById('progress-bar');
+        const progressText = document.getElementById('progress-text');
+
+        // Navigation functions
+        function updateProgress() {
+            const progress = (currentStep / totalSteps) * 100;
+            progressBar.style.width = progress + '%';
+            progressText.textContent = `Progress: ${progress}%`;
+            
+            stepIndicators.forEach((indicator, index) => {
+                const stepNumber = index + 1;
+                const circle = indicator.querySelector('div');
+                if (stepNumber < currentStep) {
+                    circle.classList.remove('bg-gray-300', 'text-gray-600');
+                    circle.classList.add('bg-primary', 'text-white');
+                } else if (stepNumber === currentStep) {
+                    circle.classList.remove('bg-gray-300');
+                    circle.classList.add('bg-primary', 'text-white');
+                } else {
+                    circle.classList.remove('bg-primary', 'text-white');
+                    circle.classList.add('bg-gray-300', 'text-gray-600');
+                }
+            });
+        }
+
+        function showStep(step) {
+            stepContents.forEach(content => content.classList.add('hidden'));
+            document.getElementById(`step${step}-content`).classList.remove('hidden');
+            currentStep = step;
+            updateProgress();
+        }
+
+        // Event listeners for navigation
+        document.getElementById('next1').addEventListener('click', () => {
+            if (validateStep1()) showStep(2);
+        });
+        document.getElementById('prev2').addEventListener('click', () => showStep(1));
+        document.getElementById('next2').addEventListener('click', () => {
+            if (validateStep2()) showStep(3);
+        });
+        document.getElementById('prev3').addEventListener('click', () => showStep(2));
+        document.getElementById('next3').addEventListener('click', () => {
+            if (validateStep3()) {
+                fillReview();
+                showStep(4);
+            }
+        });
+        document.getElementById('prev4').addEventListener('click', () => showStep(3));
+
+        // Validation functions
+        function validateStep1() {
+            const required = ['full-name', 'email', 'phone', 'dob'];
+            return required.every(id => document.getElementById(id).value.trim() !== '');
+        }
+        
+        function validateStep2() {
+            return document.getElementById('application-type').value !== '' &&
+                   document.getElementById('motivation').value.trim() !== '';
+        }
+        
+        function validateStep3() {
+            const requiredFiles = ['resume', 'id-proof'];
+            return requiredFiles.every(id => document.getElementById(id).files.length > 0);
+        }
+
+        // Fill review section
+        function fillReview() {
+            document.getElementById('review-name').textContent = `Name: ${document.getElementById('full-name').value}`;
+            document.getElementById('review-email').textContent = `Email: ${document.getElementById('email').value}`;
+            document.getElementById('review-phone').textContent = `Phone: ${document.getElementById('phone').value}`;
+            document.getElementById('review-dob').textContent = `Date of Birth: ${document.getElementById('dob').value}`;
+            
+            document.getElementById('review-type').textContent = `Type: ${document.getElementById('application-type').options[document.getElementById('application-type').selectedIndex].text}`;
+            document.getElementById('review-location').textContent = `Location: ${document.getElementById('location').value || 'Not specified'}`;
+            document.getElementById('review-motivation').textContent = `Motivation: ${document.getElementById('motivation').value}`;
+            
+            document.getElementById('review-resume').textContent = `Resume: ${document.getElementById('resume').files[0]?.name || 'Not uploaded'}`;
+            document.getElementById('review-id-proof').textContent = `ID Proof: ${document.getElementById('id-proof').files[0]?.name || 'Not uploaded'}`;
+            document.getElementById('review-transcript').textContent = `Transcript: ${document.getElementById('transcript').files[0]?.name || 'Not uploaded'}`;
+            document.getElementById('review-reference').textContent = `Reference Letter: ${document.getElementById('reference-letter').files[0]?.name || 'Not uploaded'}`;
+        }
+
+        // Submit form
+        document.getElementById('application-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Simulate submission
+            document.querySelector('.bg-white').classList.add('hidden');
+            document.getElementById('confirmation').classList.remove('hidden');
+            
+            // Generate random application ID
+            const appId = 'APP-' + Math.random().toString(36).substr(2, 9).toUpperCase();
+            document.getElementById('application-id').textContent = appId;
+            
+            // Store in localStorage for tracking
+            localStorage.setItem('applicationId', appId);
+        });
+
+        // Track progress
+        document.getElementById('track-btn').addEventListener('click', () => {
+            document.getElementById('confirmation').classList.add('hidden');
+            document.getElementById('tracking-section').classList.remove('hidden');
+        });
+
+        // Initialize
+        window.onload = () => {
+            updateProgress();
+            
+            // Load previous data if exists
+            const savedId = localStorage.getItem('applicationId');
+            if (savedId && window.location.hash === '#track') {
+                document.querySelector('.bg-white').classList.add('hidden');
+                document.getElementById('confirmation').classList.add('hidden');
+                document.getElementById('tracking-section').classList.remove('hidden');
+                document.getElementById('application-id').textContent = savedId;
+            }
+        };
+    </script>
+</body>
+</html>
+</content>
+</create_file>
