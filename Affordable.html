@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affordable Tuition Plans</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen font-sans">
+    <header class="bg-white shadow-lg border-b border-gray-200">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-indigo-600">EDUHUB</h1>
+            <nav class="space-x-6">
+                <a href="index.html" class="text-gray-700 hover:text-indigo-600 transition-colors duration-300">Home</a>
+                <a href="#plans" class="text-gray-700 hover:text-indigo-600 transition-colors duration-300">Plans</a>
+                <a href="#contact" class="text-gray-700 hover:text-indigo-600 transition-colors duration-300">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <section id="hero" class="text-center mb-16">
+            <h2 class="text-5xl font-extrabold text-gray-800 mb-6 leading-tight">Affordable Tuition Plans</h2>
+            <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+                Flexible payment plans and scholarships available — we work with families to make quality education accessible.
+            </p>
+            <div class="relative">
+                
+                <div class="absolute inset-0 bg-indigo-200 bg-opacity-30 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-graduation-cap text-6xl text-indigo-600 opacity-80"></i>
+                </div>
+            </div>
+        </section>
+
+        <section id="plans" class="grid md:grid-cols-2 gap-12 mb-16">
+            <div class="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                <i class="fas fa-wallet text-4xl text-green-500 mb-6"></i>
+                <h3 class="text-3xl font-semibold text-gray-800 mb-4">Flexible Payment Plans</h3>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Our customizable payment options allow families to spread tuition costs over convenient periods, reducing financial stress. Choose monthly, quarterly, or annual installments that align with your budget, ensuring uninterrupted access to educational resources.
+                </p>
+                <ul class="list-disc list-inside text-gray-600 space-y-2">
+                    <li>No interest for extended plans</li>
+                    <li>Easy online application process</li>
+                    <li>Support for low-income families</li>
+                </ul>
+                <button class="mt-6 bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300" onclick="scrollToContact()">Learn More</button>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                <i class="fas fa-award text-4xl text-yellow-500 mb-6"></i>
+                <h3 class="text-3xl font-semibold text-gray-800 mb-4">Scholarships Available</h3>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Unlock opportunities through our merit-based, need-based, and community scholarships. We are dedicated to recognizing academic excellence, financial need, and contributions to the community, making education attainable for all deserving students.
+                </p>
+                <ul class="list-disc list-inside text-gray-600 space-y-2">
+                    <li>Automatic eligibility checks</li>
+                    <li>Partial to full coverage options</li>
+                    <li>Renewable awards for consistent performance</li>
+                </ul>
+                <button class="mt-6 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300" onclick="scrollToContact()">Apply Now</button>
+            </div>
+        </section>
+
+        <section id="testimonials" class="mb-16">
+            <h3 class="text-4xl font-bold text-center text-gray-800 mb-12">Families Share Their Experiences</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0c38a52d-8d46-430f-a01a-5702e261312f.png" alt="Portrait of Jane Doe, a smiling middle-aged woman with short brown hair and glasses, representing a satisfied parent" class="rounded-full mr-4" />
+
+                    </div>
+                    <p class="text-gray-600 italic">"The flexible payment plan saved us! We can now focus on our child's education without worrying about finances."</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3aeecbe7-34d6-443f-beeb-df67f2d01086.png" alt="Portrait of John Smith, a friendly older man with gray hair and a beard, symbolizing a grateful grandfather" class="rounded-full mr-4" />
+                       
+                    </div>
+                    <p class="text-gray-600 italic">"Thanks to the scholarship, my grandchild is thriving in a great school. Your team made it so easy!"</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/df2a090d-cd01-4231-ba73-cb0c53d304d6.png" alt="Portrait of Maria Lopez, a young woman with long dark hair and a warm smile, embodying a dedicated student beneficiary" class="rounded-full mr-4" />
+                        
+                    </div>
+                    <p class="text-gray-600 italic">"The support system here truly democratized education for our community."</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="bg-white p-12 rounded-xl shadow-lg text-center">
+            <h3 class="text-4xl font-bold text-gray-800 mb-6">Ready to Get Started?</h3>
+            <p class="text-gray-600 mb-8">Contact our financial aid team to discuss your options.</p>
+            <form class="max-w-lg mx-auto space-y-6">
+                <input type="text" placeholder="Your Name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+                <input type="email" placeholder="Your Email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+                <textarea placeholder="Tell us about your financial needs..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 h-24 resize-none"></textarea>
+                <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-full transition-colors duration-300">
+                    <i class="fas fa-paper-plane mr-2"></i>Send Message
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>© 2025 EDUHUB. All rights reserved. Empowering families, enriching educations.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToContact() {
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
+</content>
+</create_file>
